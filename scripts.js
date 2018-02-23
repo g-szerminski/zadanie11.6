@@ -25,7 +25,7 @@ $(function(){
 				self.removeColumn();
 			});
 
-			columnAddCard.click(function() {
+			$columnAddCard.click(function() {
 				self.addCard(new Card(prompt('Enter the name of the card')));
 			});
 
@@ -41,7 +41,6 @@ $(function(){
 		addCard: function(card) {
 			this.$element.children('ul').append(card.$element);
 		},
-
 		removeColumn: function() {
 			this.$element.remove();
 		}
@@ -58,7 +57,7 @@ $(function(){
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
 			
-			$cardDelete.clic(function() {
+			$cardDelete.click(function() {
 				self.removeCard();
 			});
 
@@ -93,9 +92,9 @@ $(function(){
 
 	$('.create-column')
 		.click(function(){
-		var name = prompt('Enter a column name');
-		var column = new Column(name);
-		board.addColumn(column);
+			var name = prompt('Enter a column name');
+			var column = new Column(name);
+			board.addColumn(column);
 		});
 
 	var todoColumn = new Column('To do');
