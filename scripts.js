@@ -19,13 +19,13 @@ $(function(){
 			var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
 			var $columnCardList = $('<ul>').addClass('column-card-list');
 			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-			var $columnAddCard = $('button').addClacc('add-card').text('Add a card');
+			var $columnAddCard = $('button').addClass('add-card').text('Add a card');
 
 			$columnDelete.click(function() {
 				self.removeColumn();
 			});
 
-			columnAddCard.clic(function() {
+			columnAddCard.click(function() {
 				self.addCard(new Card(prompt('Enter the name of the card')));
 			});
 
@@ -34,9 +34,9 @@ $(function(){
 			$column.append($columnAddCard);
 			$column.append($columnCardList);
 			return $column;
-		}
-	}	
-
+		}	
+	}
+	
 	Column.prototype = {
 		addCard: function(card) {
 			this.$element.children('ul').append(card.$element);
@@ -46,7 +46,7 @@ $(function(){
 			this.$element.remove();
 		}
 	}
-
+	
 	function Card(description) {
 		var self = this;
 		this.id = randomString();
@@ -65,9 +65,9 @@ $(function(){
 			$card.append($cardDelete);
 			$card.append($cardDescription);
 			return $card;
-		}
+		}			
 	}
-
+		
 	Card.prototype = {
 		removeCard: function() {
 			this.$element.remove();
@@ -79,15 +79,15 @@ $(function(){
 		addColumn: function(column) {
 		this.$element.append(column.$element);
 		initSortable();
-		}
+		},
 
-		$element: $('#board .column-container');
+		$element: $('#board .column-container')
 	}
 
 	function initSortable() {
 		$('.column-card-list').sortable({
-		connectWith: '.column-card-list';
-		placeholder: 'card-placeholder';
+		connectWith: '.column-card-list',
+		placeholder: 'card-placeholder'
 		}).disableSelection();
 	}
 
