@@ -1,0 +1,27 @@
+{
+  "name": "zadanie11.6",
+  "version": "1.0.0",
+  "description": "Kanban",
+  "main": "scripts.js",
+  "dependencies": {
+    "jshint": "^2.9.5"
+  },
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.23.6",
+    "globstar": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-szerminski/zadanie11.6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-szerminski/zadanie11.6/issues"
+  },
+  "homepage": "https://github.com/g-szerminski/zadanie11.6#readme"
+}
